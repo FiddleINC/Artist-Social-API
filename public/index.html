@@ -5,30 +5,43 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
-            integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,423&display=swap"
+            rel="stylesheet">
+        <title>Artist Socials</title>
         <link rel="stylesheet" href="index.css" />
     </head>
 
     <body>
         <div class="container">
-            <h1>Find your Artist's Socials</h1>
-            <div id="searchWrapper">
-                <form>
-                    <input type="text" name="searchBar" id="searchBar" placeholder="search for a artist"
-                        list="huge_list" />
-                    <datalist id="huge_list">
-                    </datalist>
-                    <br />
-
-                </form>
-
+            <h1 id="artist-social-api">Artist Social API</h1>
+            <br>
+            <h2 id="introduction">Introduction</h2>
+            <p>Get the socials of any artist on earth in JSON format</p>
+            <br>
+            <h2 id="installation">Installation</h2>
+            <ol>
+                <li>Fork the Repository <b><a href="https://github.com/FiddleINC/Artist-Social-API">Github Link</a></b>
+                </li>
+                <li>Clone the Repository</li>
+                <li>Install the dependicies using <code>npm install</code> or <code>yarn install</code></li>
+                <li>Run the server using <code>npm start</code> or <code>yarn start</code></li>
+            </ol>
+            <br>
+            <h2 id="usage">Usage</h2>
+            <p>Just call a HTTP request </p>
+            <div class="language">
+            <pre><code class="language-bash">curl -X GET &quot;http://localhost:3000/socials?name=liluzivert&quot; -H &quot;Content-Type: application/json&quot;</code></pre>
             </div>
-            <button id="searchButton" type="button">Search</button>
-        </div>
-        <script src="./index.js"></script>
+            <br>
+            <div class="language">
+                <pre><code class="language-javascript">//for axios
+axios.get(&quot;http://localhost:3000/socials?name=liluzivert&quot;)
+.then(response =&gt; {
+    console.log(response.body)
+}).catch(error =&gt; {
+    console.error(error)
+})</code></pre>
+            </div>
     </body>
 
 </html>
