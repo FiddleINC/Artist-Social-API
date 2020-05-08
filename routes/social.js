@@ -14,7 +14,7 @@ var socials = {
 };
 
 var getSocials = (queryName, res) => {
-	google.resultsPerPage = 25;
+	google.resultsPerPage = 50;
 	google(queryName, function(err, response) {
 		console.log(chalk.bgMagenta.black(`Searching Socials for ${queryName} `));
 		if (err) console.error(err);

@@ -7,8 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,423&display=swap"
             rel="stylesheet">
+            
         <title>Artist Socials</title>
         <link rel="stylesheet" href="index.css" />
+
     </head>
 
     <body>
@@ -17,30 +19,39 @@
             <br>
             <h2 id="introduction">Introduction</h2>
             <p>Get the socials of any artist on earth in JSON format</p>
+
+            <div class="input">
+                <p>Try it: Enter the artist name</p>
+                <form action="/socials">
+                    <input type="text" id="searchBar" name="name" placeholder="Enter Artist Name">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
             <br>
             <h2 id="installation">Installation</h2>
             <ol>
                 <li>Fork the Repository <b><a href="https://github.com/FiddleINC/Artist-Social-API">Github Link</a></b>
                 </li>
                 <li>Clone the Repository</li>
-                <li>Install the dependicies using <code>npm install</code> or <code>yarn install</code></li>
+                <li>Install the dependicies using <code class="language-bash">npm install</code> or <code>yarn
+                        install</code></li>
                 <li>Run the server using <code>npm start</code> or <code>yarn start</code></li>
             </ol>
             <br>
             <h2 id="usage">Usage</h2>
             <p>Just call a HTTP request </p>
             <div class="language">
-            <pre><code class="language-bash">curl -X GET &quot;http://localhost:3000/socials?name=liluzivert&quot; -H &quot;Content-Type: application/json&quot;</code></pre>
+                <pre><code class="language-bash">curl -X GET &quot;http://localhost:3000/socials?name=liluzivert&quot; -H &quot;Content-Type: application/json&quot;</code></pre>
             </div>
             <br>
             <div class="language">
                 <pre><code class="language-javascript">//for axios
 axios.get(&quot;http://localhost:3000/socials?name=liluzivert&quot;)
-.then(response =&gt; {
-    console.log(response.body)
-}).catch(error =&gt; {
-    console.error(error)
-})</code></pre>
+    .then(response =&gt; {
+            console.log(response.body)
+    }).catch(error =&gt; {
+            console.error(error)
+    })</code></pre>
             </div>
     </body>
 
