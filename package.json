@@ -14,5 +14,8 @@
 		"google": "^2.1.0",
 		"morgan": "~1.9.1",
 		"nodemon": "^2.0.3"
+	},
+	"devDependencies": {
+		"marked": "^1.0.0"
 	}
 }
