@@ -16,6 +16,6 @@
 		"nodemon": "^2.0.3"
 	},
 	"devDependencies": {
-		"marked": "^1.0.0"
+		"marked": "^4.0.10"
 	}
 }
